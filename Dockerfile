@@ -26,15 +26,8 @@ RUN npm install -g serve
 # Copy built application from builder stage
 COPY --from=builder /app/dist ./dist
 
-# Create a simple health check script
-COPY <<EOF /app/healthcheck.js
-const http = require('http');
-http.get('http://localhost:3000', (res) => {
-  process.exit(res.statusCode === 200 ? 0 : 1);
-}).on('error', () => {
-  process.exit(1);
-});
-EOF
+# Copy the health check script
+COPY healthcheck.js ./healthcheck.js
 
 # Expose port
 EXPOSE 3000
