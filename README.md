@@ -268,18 +268,4 @@ git branch
 # Not * slow-version
 ```
 
-## Contributing
-
-Performance improvements and bug fixes are welcome!
-
-## License
-
-MIT
-
-## Contact & Support
-
-For questions or issues, please open an issue in the repository.
-
----
-
 **Remember**: Performance is a feature. Every millisecond matters to user experience and SEO ranking! 🚀
